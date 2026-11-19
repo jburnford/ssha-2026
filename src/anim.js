@@ -27,7 +27,7 @@ function playYears(root) {
       const tot = n._c[n._c.length - 1][1];
       n.setAttribute('r', c ? Math.max(2.5, n._r * Math.sqrt(c / tot)).toFixed(1) : 0);
     });
-    if (clock) { const y = Math.floor(t / 100); clock.textContent = !t ? '' : (monthly.has(y) ? MONTHS[t % 100 - 1] + ' ' + y : y); }
+    if (clock) { const y = Math.floor(t / 100); clock.textContent = !t ? '' : (monthly.has(y) ? y + '-' + String(t % 100).padStart(2, '0') : y); }
     return fresh;
   }
   function step() {

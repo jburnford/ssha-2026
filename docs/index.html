@@ -559,7 +559,7 @@ html, body { margin: 0; height: 100%; background: var(--ground); overflow: hidde
 </section>
 <section class="slide" id="p2">
   <p class="label">People and plants</p>
-  <h2>Two botanists at the centre of the journal</h2>
+  <h2>Two botanists in <i>The Tropical Agriculturist</i></h2>
   <svg class="map" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="A network drawn from The Tropical Agriculturist. Henry Trimen and Daniel Morris are the two large nodes. About 1,250 small dots are the articles that name either of them. Around them sit the people most often named in the same articles, such as Thwaites, Marshall Ward, Nock, Hooker and J. E. Howard, the places, such as Peradeniya, Kew, Jamaica and Java, and the commodities, led by coffee, tea, cacao, rubber and cinchona.">
     <path class="ne ne-bot" data-y="188112" d="M637 600L190 372M637 600L1100 372M642 598L190 372M642 598L1100 372"/>
     <path class="ne ne-bot" data-y="188201" d="M640 593L190 372M640 593L1100 372M643 602L190 372M643 602L1100 372"/>
@@ -5261,7 +5261,7 @@ function playYears(root) {
       const tot = n._c[n._c.length - 1][1];
       n.setAttribute('r', c ? Math.max(2.5, n._r * Math.sqrt(c / tot)).toFixed(1) : 0);
     });
-    if (clock) { const y = Math.floor(t / 100); clock.textContent = !t ? '' : (monthly.has(y) ? MONTHS[t % 100 - 1] + ' ' + y : y); }
+    if (clock) { const y = Math.floor(t / 100); clock.textContent = !t ? '' : (monthly.has(y) ? y + '-' + String(t % 100).padStart(2, '0') : y); }
     return fresh;
   }
   function step() {
