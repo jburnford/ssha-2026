@@ -105,7 +105,7 @@ a1 = ['<text class="big" x="864" y="196">about 12,500</text>',
       '<text class="stn" x="864" y="226" style="font-weight:400">records name a person at Colombo alone</text>',
       '<text class="yr" x="864" y="252">Blue Books 1863–1917, Ferguson’s Directory</text>',
       '<path class="line" stroke="var(--career)" d="M876 316 V360"/>',
-      '<path class="line" stroke="var(--neutral)" stroke-width="5" stroke-dasharray="2 11" d="M876 360 V556"/>',
+      '<path class="line" stroke="var(--neutral)" stroke-width="5" stroke-dasharray="2 11" d="M876 360 V636"/>',
       '<circle cx="876" cy="316" r="10" fill="var(--accent)" stroke="var(--ring)" stroke-width="3"/>',
       '<text class="stn" x="902" y="314">Read from the page and placed</text><text class="yr" x="902" y="336">done: this is what the atlas shows</text>',
       '<circle class="st" cx="876" cy="396" r="9" style="stroke:var(--neutral)"/>',
@@ -113,7 +113,9 @@ a1 = ['<text class="big" x="864" y="196">about 12,500</text>',
       '<circle class="st" cx="876" cy="476" r="9" style="stroke:var(--neutral)"/>',
       '<text class="stn" x="902" y="474">Tied to an identifier</text><text class="yr" x="902" y="496">next: link to Wikidata, or mint</text>',
       '<circle class="st" cx="876" cy="556" r="9" style="stroke:var(--neutral)"/>',
-      '<text class="stn" x="902" y="554">Seeds for the next source</text><text class="yr" x="902" y="576">then: they help read the Gazettes</text>']
+      '<text class="stn" x="902" y="554">Seeds for the next source</text><text class="yr" x="902" y="576">then: they help read the Gazettes</text>',
+      '<circle class="st" cx="876" cy="636" r="9" style="stroke:var(--neutral)"/>',
+      '<text class="stn" x="902" y="634">Entities connected to the seeds</text><text class="yr" x="902" y="656">then: other people, institutions and places</text>']
 a1x = ('  <img class="atlas" src="images/atlas_people_colombo.png" alt="The Ceylon Historical Atlas showing a relief map around Colombo with a panel headed People named at this place: Colombo, listing 11,316 Blue Book name-and-volume records and 1,147 directory roles, 12,463 records in all">\n')
 
 # m1: both directions ------------------------------------------------------------------------------------------
@@ -164,7 +166,7 @@ HTML = """<!doctype html>
 <body>
 
 """ + slide("a1", "The graph and the text mining build each other", a1,
-            "The live atlas beside three stages. The atlas shows a map around Colombo and a panel of people named at that place. About 12,500 records name a person at Colombo alone, from the Blue Books of 1863 to 1917 and Ferguson's Directory. Stage one, read from the page and placed, is done. Stage two, joining the same person across years, stage three, tying each person to an identifier, and stage four, using them as seeds to read the next source, come next.",
+            "The live atlas beside five stages. The atlas shows a map around Colombo and a panel of people named at that place. About 12,500 records name a person at Colombo alone, from the Blue Books of 1863 to 1917 and Ferguson's Directory. Stage one, read from the page and placed, is done. Stage two, joining the same person across years, stage three, tying each person to an identifier, stage four, using them as seeds to read the next source, and stage five, finding the other people, institutions and places connected to those seeds, come next.",
             "Every source read adds to the graph, and every addition makes the next source easier to read.").replace('style="top:590px"', 'style="top:608px;font-size:21px;width:760px"').replace('<h2>The graph and the text mining build each other</h2>\n', '<h2>The graph and the text mining build each other</h2>\n' + a1x) + "\n" + \
     slide("e1", "Building the Ceylonese side of the graph", e1,
             "A chart in which each dot is one person read from sampled pages of Ferguson's Ceylon Directory for 1920 to 1921. Nine rows are kinds of people: officials and councils, justices of the peace, headmen, lawyers and doctors, merchants and brokers, the press, associations and societies, religion and schools, clerks and others. British and European people stack to the left of a centre line and Ceylonese people to the right. Blue dots were already in the Colonial Office List, green dots were named in the journal, and orange dots are new to the graph. The left side is small and partly blue; the right side is large and almost all orange.",
