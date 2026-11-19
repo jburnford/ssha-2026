@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ceylon at scale: draft slides</title>
+<!-- Draft slides on the scale of the Ceylon material, each 1280 x 720. Add ?dark for the dark version.
+     Counts are rounded and come from ceylon_scale_counts.tsv and the Ceylon graph's STATUS.md (17 November 2026). -->
+<link rel="stylesheet" href="slides.css">
+</head>
+<body>
+
+<section class="slide" id="c1">
+  <p class="label">The base</p>
+  <h2>In the biographies, most of Ceylon’s officials stayed</h2>
+  <svg class="map" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Ceylon as an interchange. A thick line runs to stations inside the island: Colombo, Kandy, Galle, Jaffna; about 770 officials stayed. Thinner lines run out to the Straits Settlements, Hong Kong, Mauritius, Cyprus, Nigeria and Trinidad; about 320 also served elsewhere.">
+    <path class="line thick" stroke="var(--career)" d="M560 360 H120"/>
+    <path class="line thin" stroke="var(--career)" d="M560 360 H1180"/>
+    <path class="line thin" stroke="var(--career)" d="M700 360 L770 290 H1180"/>
+    <path class="line thin" stroke="var(--career)" d="M700 360 L770 430 H1180"/>
+    <text class="ln" x="120" y="300" fill="var(--career)">about 770 stayed in Ceylon</text>
+    <text class="ln" x="1180" y="232" text-anchor="end" fill="var(--career)">about 320 also served elsewhere</text>
+    <circle class="st" cx="450" cy="360" r="8"/><text class="stn" x="450" y="394" text-anchor="middle">Colombo</text>
+    <circle class="st" cx="350" cy="360" r="8"/><text class="stn" x="350" y="394" text-anchor="middle">Kandy</text>
+    <circle class="st" cx="250" cy="360" r="8"/><text class="stn" x="250" y="394" text-anchor="middle">Galle</text>
+    <circle class="st" cx="150" cy="360" r="8"/><text class="stn" x="150" y="394" text-anchor="middle">Jaffna</text>
+    <circle class="st" cx="880" cy="290" r="8"/><text class="stn" x="880" y="272" text-anchor="middle">Straits Settlements</text>
+    <circle class="st" cx="1080" cy="290" r="8"/><text class="stn" x="1080" y="272" text-anchor="middle">Hong Kong</text>
+    <circle class="st" cx="880" cy="360" r="8"/><text class="stn" x="880" y="342" text-anchor="middle">Mauritius</text>
+    <circle class="st" cx="1080" cy="360" r="8"/><text class="stn" x="1080" y="342" text-anchor="middle">Cyprus</text>
+    <circle class="st" cx="880" cy="430" r="8"/><text class="stn" x="880" y="464" text-anchor="middle">Nigeria</text>
+    <circle class="st" cx="1080" cy="430" r="8"/><text class="stn" x="1080" y="464" text-anchor="middle">Trinidad</text>
+    <circle class="st" cx="560" cy="360" r="16" stroke-width="4"/><text class="stn" x="560" y="318" text-anchor="middle" style="font-size:24px">Ceylon</text>
+  </svg>
+  <div class="note" style="top:540px"><p>About 1,100 officials in the Lists’ biographies held a post in Ceylon. Seven in ten never served in another colony.</p></div>
+  <svg class="where" width="420" height="20"><path d="M6 10 H186" stroke="var(--neutral)" stroke-width="3"/><circle cx="6" cy="10" r="6" fill="var(--accent)"/><circle cx="42" cy="10" r="4" fill="var(--neutral)"/><circle cx="78" cy="10" r="4" fill="var(--neutral)"/><circle cx="114" cy="10" r="4" fill="var(--neutral)"/><circle cx="150" cy="10" r="4" fill="var(--neutral)"/><circle cx="186" cy="10" r="4" fill="var(--neutral)"/><text x="204" y="15">The base</text></svg>
+</section>
+
+<section class="slide" id="c2">
+  <p class="label">The base</p>
+  <h2>The same careers at two scales</h2>
+  <div class="maps">
+    <img src="images/ceylon_local.png" style="left:96px" alt="Map of Ceylon with circles at 53 towns and provinces sized by the number of postings; Colombo is largest, then Kandy, Galle and Jaffna">
+    <img src="images/ceylon_global.png" style="left:446px" alt="World map with lines from Ceylon to the other colonies its officials served in, densest toward Malaya, East and West Africa and the Caribbean">
+  </div>
+  <p class="mapcap" style="left:96px;width:340px"><b>Inside the island:</b> 54 places, read from about 220 printed spellings.</p>
+  <p class="mapcap" style="left:446px;width:630px"><b>Beyond it:</b> about 110 other colonies and territories.</p>
+
+  <svg class="where" width="420" height="20"><path d="M6 10 H186" stroke="var(--neutral)" stroke-width="3"/><circle cx="6" cy="10" r="6" fill="var(--accent)"/><circle cx="42" cy="10" r="4" fill="var(--neutral)"/><circle cx="78" cy="10" r="4" fill="var(--neutral)"/><circle cx="114" cy="10" r="4" fill="var(--neutral)"/><circle cx="150" cy="10" r="4" fill="var(--neutral)"/><circle cx="186" cy="10" r="4" fill="var(--neutral)"/><text x="204" y="15">The base</text></svg>
+</section>
+
+<section class="slide" id="c3">
+  <p class="label">The base</p>
+  <h2>The biographies are the tip of the colonial state</h2>
+  <svg class="map" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Three lines in proportion: about 1,100 officials with a biography, shown as a single dot; about 21,000 entries in the Lists own staff rosters for Ceylon; about 168,000 entries in the Blue Books staff lists.">
+    <text class="stn" x="100" y="226">Officials with a biography in the Lists</text>
+    <circle cx="110" cy="250" r="8" fill="var(--career)"/>
+    <text class="yr" x="139" y="256" style="font-size:19px">about 1,100 people</text>
+    <text class="stn" x="100" y="330">The Lists’ own staff rosters for Ceylon, 49 editions</text>
+    <path class="line" stroke="var(--neutral)" d="M110 354 H235"/><circle class="st" cx="110" cy="354" r="8"/><circle class="st" cx="235" cy="354" r="8"/>
+    <text class="yr" x="257" y="360" style="font-size:19px">about 21,000 entries</text>
+    <text class="stn" x="100" y="434">The Blue Books’ staff lists, 40 volumes, 1863–1917</text>
+    <path class="line" stroke="var(--neutral)" d="M110 458 H1110"/><circle class="st" cx="110" cy="458" r="8"/><circle class="st" cx="1110" cy="458" r="8"/>
+    <text class="yr" x="1110" y="434" text-anchor="end" style="font-size:19px">about 168,000 entries</text>
+  </svg>
+  <div class="note" style="top:540px"><p>The Blue Books name about 1,300 officials in 1863 and about 9,400 in 1917. These are the people now being added to the Ceylon graph.</p></div>
+  <svg class="where" width="420" height="20"><path d="M6 10 H186" stroke="var(--neutral)" stroke-width="3"/><circle cx="6" cy="10" r="6" fill="var(--accent)"/><circle cx="42" cy="10" r="4" fill="var(--neutral)"/><circle cx="78" cy="10" r="4" fill="var(--neutral)"/><circle cx="114" cy="10" r="4" fill="var(--neutral)"/><circle cx="150" cy="10" r="4" fill="var(--neutral)"/><circle cx="186" cy="10" r="4" fill="var(--neutral)"/><text x="204" y="15">The base</text></svg>
+</section>
+
+<section class="slide" id="c4">
+  <p class="label">The base</p>
+  <h2>Ceylon and India: two services, few crossings</h2>
+  <svg class="map" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Two parallel lines, one for Ceylon in the Colonial Office List and one for India in the India Office List, joined by only four short links: governors; judges and a bishop; experts on loan; and India’s agents in Ceylon from the 1920s.">
+    <path class="line" stroke="var(--career)" d="M110 270 H1170"/>
+    <path class="line" stroke="var(--iol)" d="M110 450 H1170"/>
+    <text class="ln" x="110" y="232" fill="var(--career)">Ceylon, in the Colonial Office List · about 1,100 officials</text>
+    <text class="ln" x="110" y="496" fill="var(--iol)">India, in the India Office List · about 14,600 officials</text>
+    <path class="line" stroke="var(--ring)" stroke-width="4" d="M200 270 V450"/><circle class="st" cx="200" cy="270" r="8"/><circle class="st" cx="200" cy="450" r="8"/>
+    <text class="stn" x="218" y="354">Governors</text><text class="yr" x="218" y="378">Wodehouse, Ridgeway, Havelock</text>
+    <path class="line" stroke="var(--ring)" stroke-width="4" d="M470 270 V450"/><circle class="st" cx="470" cy="270" r="8"/><circle class="st" cx="470" cy="450" r="8"/>
+    <text class="stn" x="488" y="354">Judges and a bishop</text><text class="yr" x="488" y="378">Phear, Buller, Copleston</text>
+    <path class="line" stroke="var(--ring)" stroke-width="4" d="M740 270 V450"/><circle class="st" cx="740" cy="270" r="8"/><circle class="st" cx="740" cy="450" r="8"/>
+    <text class="stn" x="758" y="354">Experts on loan</text><text class="yr" x="758" y="378">forests, survey, agriculture</text>
+    <path class="line" stroke="var(--ring)" stroke-width="4" d="M1010 270 V450"/><circle class="st" cx="1010" cy="270" r="8"/><circle class="st" cx="1010" cy="450" r="8"/>
+    <text class="stn" x="1028" y="354">India’s agents in Ceylon</text><text class="yr" x="1028" y="378">from the 1920s</text>
+  </svg>
+  <div class="note" style="top:540px"><p>About thirty officials in each List served in both. Nearly all were at the top, or lent for a task.</p></div>
+  <svg class="where" width="420" height="20"><path d="M6 10 H186" stroke="var(--neutral)" stroke-width="3"/><circle cx="6" cy="10" r="6" fill="var(--accent)"/><circle cx="42" cy="10" r="4" fill="var(--neutral)"/><circle cx="78" cy="10" r="4" fill="var(--neutral)"/><circle cx="114" cy="10" r="4" fill="var(--neutral)"/><circle cx="150" cy="10" r="4" fill="var(--neutral)"/><circle cx="186" cy="10" r="4" fill="var(--neutral)"/><text x="204" y="15">The base</text></svg>
+</section>
+
+<script>if (location.search.includes('dark')) document.documentElement.classList.add('dark');</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+@font-face { font-family: "Atkinson Next"; src: url("fonts/AtkinsonHyperlegibleNext-Regular.woff") format("woff"); font-weight: 400; }
+@font-face { font-family: "Atkinson Next"; src: url("fonts/AtkinsonHyperlegibleNext-Bold.woff") format("woff"); font-weight: 700; }
+:root {
+  --ground: #FDFCF9; --title: #22272B; --body: #404040; --second: #5C6166; --accent: #1F5F96; --rule: #D9D5CB;
+  --career: #1F5F96; --iol: #1B7360; --neutral: #8C8880;
+  --tea: #2F8F4A; --bark: #A8462A; --rubber: #7B4FC4; --rice: #C99700; --coconut: #C2600A;
+  --station: #FDFCF9; --ring: #22272B;
+}
+html.dark {
+  --ground: #1C1B19; --title: #E8DFCB; --body: #C4C3C0; --second: #9A9790; --accent: #6699D3; --rule: #3A3935;
+  --career: #6699D3; --iol: #4FAA90; --neutral: #77746D;
+  --tea: #6DBF7B; --bark: #DC7559; --rubber: #B195F0; --rice: #E0B93A; --coconut: #F0A050;
+  --station: #1C1B19; --ring: #E8DFCB;
+}
+html, body { margin: 0; background: #888; }
+.slide { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground); margin: 0 0 24px;
+         font-family: "Atkinson Next", "Atkinson Hyperlegible", Arial, sans-serif; color: var(--body); }
+.label { position: absolute; left: 96px; top: 54px; margin: 0; font-size: 18px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--second); }
+h2 { position: absolute; left: 96px; top: 82px; margin: 0; font-size: 42px; line-height: 1.15; font-weight: 700; color: var(--title); letter-spacing: -0.01em; }
+svg.map { position: absolute; left: 0; top: 0; }
+.line { fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.st { fill: var(--station); stroke: var(--ring); stroke-width: 3; }
+.stn { font-size: 19px; font-weight: 700; fill: var(--title); }
+.yr { font-size: 16px; fill: var(--second); }
+.ln { font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.big { font-size: 36px; font-weight: 700; fill: var(--accent); }
+.cap { font-size: 16px; color: var(--second); }
+p { margin: 0; }
+.where { position: absolute; left: 96px; bottom: 26px; }
+.where text { font-size: 14px; fill: var(--second); }
+/* slide 2 */
+.page { position: absolute; left: 96px; top: 168px; height: 452px; border: 1px solid var(--rule); }
+.pagecap { position: absolute; left: 96px; top: 630px; width: 600px; font-size: 15px; line-height: 1.35; color: var(--second); }
+.side { position: absolute; left: 748px; top: 196px; width: 430px; font-size: 26px; line-height: 1.35; }
+.side p + p { margin-top: 28px; }
+.side b { color: var(--accent); }
+/* slide 3 */
+.video { background: #15161a; }
+.video video, .video img { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; object-fit: contain; }
+.entry { position: absolute; left: 96px; top: 176px; width: 1010px; margin: 0; padding: 4px 0 4px 26px; border-left: 4px solid var(--career); font-size: 23px; line-height: 1.45; color: var(--body); }
+.entry cite { display: block; margin-top: 12px; font-style: normal; font-size: 16px; color: var(--second); }
+/* notes */
+.clause { position: absolute; top: 352px; width: 138px; font-size: 15px; line-height: 1.35; color: var(--body); text-align: center; }
+.note { position: absolute; left: 96px; top: 500px; width: 1000px; font-size: 24px; line-height: 1.4; }
+.note p + p { margin-top: 14px; }
+.note .small { font-size: 17px; color: var(--second); }
+/* slide 6 */
+.statement { position: absolute; left: 96px; top: 150px; width: 1010px; font-size: 50px; line-height: 1.18; font-weight: 700; color: var(--title); letter-spacing: -0.01em; }
+
+/* Ceylon scale slides */
+.maps img { position: absolute; top: 148px; height: 452px; border-radius: 4px; }
+.mapcap { position: absolute; top: 610px; font-size: 18px; line-height: 1.35; color: var(--body); }
+.mapcap b { color: var(--accent); }
+.thick { stroke-width: 12; }
+.thin { stroke-width: 5; }
+
+/* the record behind a station */
+.src { position: absolute; top: 366px; width: 240px; margin: 0; font-size: 17px; line-height: 1.35; color: var(--body); text-align: center; }
+.src b { display: block; color: var(--title); margin-bottom: 4px; }
+
+/* network slide: articles, people, places, commodities */
+.ne { fill: none; stroke-width: 0.6; }
+.ne-bot { stroke: var(--neutral); opacity: 0.16; }
+.ne-person { stroke: var(--career); opacity: 0.13; }
+.ne-place { stroke: var(--iol); opacity: 0.09; }
+.ne-commodity { stroke: var(--coconut); opacity: 0.09; }
+.na { fill: var(--neutral); opacity: 0.75; }
+.na-both { fill: var(--title); opacity: 0.9; }
+.nn { stroke: var(--ground); stroke-width: 2; }
+.nn-person { fill: var(--career); }
+.nn-place { fill: var(--iol); }
+.nn-commodity { fill: var(--coconut); }
+.nn-bot { fill: var(--ground); stroke: var(--career); stroke-width: 5; }
+.nl { font-size: 14px; font-weight: 700; fill: var(--title); paint-order: stroke; stroke: var(--ground); stroke-width: 3.5px; stroke-linejoin: round; }
+.nl-big { font-size: 21px; }
+.key text { font-size: 15px; fill: var(--body); }
+.clock { font-size: 40px; font-weight: 700; fill: var(--accent); cursor: pointer; }
+@keyframes fresh { 0% { opacity: 0; fill: var(--accent); font-size: 20px; } 15% { opacity: 1; fill: var(--accent); font-size: 20px; } 100% { opacity: 1; fill: var(--title); font-size: 14px; } }
+.nl.fresh { animation: fresh 1.5s ease-out backwards; }
+/* a screenshot of the live atlas */
+.atlas { position: absolute; left: 96px; top: 156px; width: 730px; border: 1px solid var(--rule); border-radius: 4px; }
+
+/* build-up slide: dots of a stage drop in when the stage is shown (anim.js playStages) */
+@keyframes dotin { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: none; } }
+.stages.playing circle[data-s] { animation: dotin .45s ease-out backwards; }
+.stages .pile { transition: opacity .8s; }
+.stages.finale .pile { opacity: .14; }

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slides 2 to 6: the scale of the base, and the question</title>
+<!-- Draft slides after the front slide, each 1280 x 720, stacked down the page. Add ?dark for the dark version.
+     Render each to PNG with render_slides.py. Counts are rounded, from the September 2026 build. -->
+<style>
+@font-face { font-family: "Atkinson Next"; src: url("fonts/AtkinsonHyperlegibleNext-Regular.woff") format("woff"); font-weight: 400; }
+@font-face { font-family: "Atkinson Next"; src: url("fonts/AtkinsonHyperlegibleNext-Bold.woff") format("woff"); font-weight: 700; }
+:root {
+  --ground: #FDFCF9; --title: #22272B; --body: #404040; --second: #5C6166; --accent: #1F5F96; --rule: #D9D5CB;
+  --career: #1F5F96; --iol: #1B7360; --neutral: #8C8880;
+  --station: #FDFCF9; --ring: #22272B;
+}
+html.dark {
+  --ground: #1C1B19; --title: #E8DFCB; --body: #C4C3C0; --second: #9A9790; --accent: #6699D3; --rule: #3A3935;
+  --career: #6699D3; --iol: #4FAA90; --neutral: #77746D;
+  --station: #1C1B19; --ring: #E8DFCB;
+}
+html, body { margin: 0; background: #888; }
+.slide { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground); margin: 0 0 24px;
+         font-family: "Atkinson Next", "Atkinson Hyperlegible", Arial, sans-serif; color: var(--body); }
+.label { position: absolute; left: 96px; top: 54px; margin: 0; font-size: 18px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--second); }
+h2 { position: absolute; left: 96px; top: 82px; margin: 0; font-size: 42px; line-height: 1.15; font-weight: 700; color: var(--title); letter-spacing: -0.01em; }
+svg.map { position: absolute; left: 0; top: 0; }
+.line { fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.st { fill: var(--station); stroke: var(--ring); stroke-width: 3; }
+.stn { font-size: 19px; font-weight: 700; fill: var(--title); }
+.yr { font-size: 16px; fill: var(--second); }
+.ln { font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.big { font-size: 36px; font-weight: 700; fill: var(--accent); }
+.cap { font-size: 16px; color: var(--second); }
+p { margin: 0; }
+.where { position: absolute; left: 96px; bottom: 26px; }
+.where text { font-size: 14px; fill: var(--second); }
+/* slide 2 */
+.page { position: absolute; left: 96px; top: 168px; height: 452px; border: 1px solid var(--rule); }
+.pagecap { position: absolute; left: 96px; top: 630px; width: 600px; font-size: 15px; line-height: 1.35; color: var(--second); }
+.side { position: absolute; left: 748px; top: 196px; width: 430px; font-size: 26px; line-height: 1.35; }
+.side p + p { margin-top: 28px; }
+.side b { color: var(--accent); }
+/* slide 3 */
+.video { background: #15161a; }
+.video video, .video img { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; object-fit: contain; }
+.entry { position: absolute; left: 96px; top: 176px; width: 1010px; margin: 0; padding: 4px 0 4px 26px; border-left: 4px solid var(--career); font-size: 23px; line-height: 1.45; color: var(--body); }
+.entry cite { display: block; margin-top: 12px; font-style: normal; font-size: 16px; color: var(--second); }
+/* notes */
+.clause { position: absolute; top: 352px; width: 138px; font-size: 15px; line-height: 1.35; color: var(--body); text-align: center; }
+.note { position: absolute; left: 96px; top: 500px; width: 1000px; font-size: 24px; line-height: 1.4; }
+.note p + p { margin-top: 14px; }
+.note .small { font-size: 17px; color: var(--second); }
+/* slide 6 */
+.statement { position: absolute; left: 96px; top: 150px; width: 1010px; font-size: 50px; line-height: 1.18; font-weight: 700; color: var(--title); letter-spacing: -0.01em; }
+</style>
+</head>
+<body>
+
+<!-- 2. The source -->
+<section class="slide" id="s02">
+  <p class="label">The base</p>
+  <h2>Thousands of pages like this</h2>
+  <img class="page" src="images/col1913-pp561-562.webp" alt="Two facing pages of the Colonial Office List for 1913: dense columns of abbreviated biographies from Kelly to King">
+  <p class="pagecap">The Colonial Office List for 1913, pp. 561–562. Scan digitised by Google, from the Internet Archive.</p>
+  <div class="side">
+    <p><b>Two facing pages, about forty compressed lives.</b></p>
+    <p>85 volumes read, 1867 to 1966, with the India Office List alongside.</p>
+    <p>The same official returns in edition after edition, so one person may be printed forty times.</p>
+  </div>
+  <svg class="where" width="420" height="20"><path d="M6 10 H186" stroke="var(--neutral)" stroke-width="3"/><circle cx="6" cy="10" r="6" fill="var(--accent)"/><circle cx="42" cy="10" r="4" fill="var(--neutral)"/><circle cx="78" cy="10" r="4" fill="var(--neutral)"/><circle cx="114" cy="10" r="4" fill="var(--neutral)"/><circle cx="150" cy="10" r="4" fill="var(--neutral)"/><circle cx="186" cy="10" r="4" fill="var(--neutral)"/><text x="204" y="15">The base</text></svg>
+</section>
+
+<!-- 3. The video, edge to edge -->
+<section class="slide video" id="s03">
+  <video controls muted playsinline preload="none" poster="images/combined-mobility-frame.jpg" aria-label="Animated atlas of imperial career postings">
+    <source src="https://jimclifford.ca/col_matching/combined_mobility.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- 4. From pages to a base, and what is built on it -->
+<section class="slide" id="s04">
+  <p class="label">The base</p>
+  <h2>From pages to ground others can build on</h2>
+  <svg class="map" width="1280" height="720" viewBox="0 0 1280 720" role="img"
+       aria-label="A trunk line with stations: 85 volumes, about 199,000 printed entries, about 47,000 people, about 305,000 career events, arriving at the base. From the base three branches leave: Ceylon, Canada78, and a dotted branch for a build that is not yet there.">
+    <path class="line" stroke="var(--career)" d="M130 350 H800"/>
+    <path class="line" stroke="var(--career)" d="M800 350 H856 L936 270 H1180"/>
+    <path class="line" stroke="var(--career)" d="M800 350 H1180"/>
+    <path class="line" stroke="var(--neutral)" stroke-width="5" stroke-dasharray="2 11" d="M856 350 L936 430 H1180"/>
+    <circle class="st" cx="130" cy="350" r="8"/><text class="big" x="130" y="296" text-anchor="middle">85</text><text class="stn" x="130" y="392" text-anchor="middle">volumes</text><text class="yr" x="130" y="414" text-anchor="middle">1867–1966</text>
+    <circle class="st" cx="300" cy="350" r="8"/><text class="big" x="300" y="296" text-anchor="middle">199,000</text><text class="stn" x="300" y="392" text-anchor="middle">printed entries</text><text class="yr" x="300" y="414" text-anchor="middle">Colonial Office List</text>
+    <circle class="st" cx="470" cy="350" r="8"/><text class="big" x="470" y="296" text-anchor="middle">47,000</text><text class="stn" x="470" y="392" text-anchor="middle">people</text><text class="yr" x="470" y="414" text-anchor="middle">across both Lists</text>
+    <circle class="st" cx="640" cy="350" r="8"/><text class="big" x="640" y="296" text-anchor="middle">305,000</text><text class="stn" x="640" y="392" text-anchor="middle">career events</text><text class="yr" x="640" y="414" text-anchor="middle">dated and placed</text>
+    <circle class="st" cx="800" cy="350" r="15" stroke-width="4"/><text class="stn" x="800" y="296" text-anchor="middle" style="font-size:24px">The base</text><text class="yr" x="800" y="398" text-anchor="middle">places, people,</text><text class="yr" x="800" y="418" text-anchor="middle">years</text>
+    <circle class="st" cx="1050" cy="270" r="8"/><text class="stn" x="1050" y="244" text-anchor="middle">Ceylon</text>
+    <circle class="st" cx="1050" cy="350" r="8"/><text class="stn" x="1050" y="324" text-anchor="middle">Canada78</text>
+    <circle class="st" cx="1050" cy="430" r="8" style="stroke:var(--neutral)"/><text class="stn" x="1050" y="466" text-anchor="middle" style="fill:var(--second)">your build</text>
+  </svg>
+  <div class="note" style="top:530px">
+    <p>The Lists give the terrain: places as they were, the people who ran them, and the years. Other sources are built on top.</p>
+    <p class="small">Counts are rounded, from the September 2026 build.</p>
+  </div>
+  <svg class="where" width="420" height="20"><path d="M6 10 H186" stroke="var(--neutral)" stroke-width="3"/><circle cx="6" cy="10" r="6" fill="var(--accent)"/><circle cx="42" cy="10" r="4" fill="var(--neutral)"/><circle cx="78" cy="10" r="4" fill="var(--neutral)"/><circle cx="114" cy="10" r="4" fill="var(--neutral)"/><circle cx="150" cy="10" r="4" fill="var(--neutral)"/><circle cx="186" cy="10" r="4" fill="var(--neutral)"/><text x="204" y="15">The base</text></svg>
+</section>
+
+<!-- 5. The scale of what comes next -->
+<section class="slide" id="s05">
+  <p class="label">The base</p>
+  <h2>One colony’s printed record is twenty times the Lists</h2>
+  <svg class="map" width="1280" height="720" viewBox="0 0 1280 720" role="img"
+       aria-label="Four lines whose lengths are in proportion to pages: the Colonial and India Office Lists, more than 50,000 pages; Ceylon Blue Books, 41,000; Ceylon Government Gazettes, 207,000; Ceylon books, reports and planters' records, 730,000.">
+    <text class="stn" x="100" y="214">The Colonial and India Office Lists</text>
+    <path class="line" stroke="var(--career)" d="M110 236 H178"/><circle class="st" cx="110" cy="236" r="8"/><circle class="st" cx="178" cy="236" r="8"/>
+    <text class="yr" x="198" y="242" style="font-size:19px">more than 50,000 pages</text>
+    <text class="stn" x="100" y="306">Ceylon Blue Books, 1863–1938</text>
+    <path class="line" stroke="var(--neutral)" d="M110 328 H166"/><circle class="st" cx="110" cy="328" r="8"/><circle class="st" cx="166" cy="328" r="8"/>
+    <text class="yr" x="186" y="334" style="font-size:19px">41,000 pages</text>
+    <text class="stn" x="100" y="398">Ceylon Government Gazettes, 1889–1948</text>
+    <path class="line" stroke="var(--neutral)" d="M110 420 H394"/><circle class="st" cx="110" cy="420" r="8"/><circle class="st" cx="394" cy="420" r="8"/>
+    <text class="yr" x="414" y="426" style="font-size:19px">207,000 pages</text>
+    <text class="stn" x="100" y="490">Ceylon books, reports and planters’ records</text>
+    <path class="line" stroke="var(--neutral)" d="M110 512 H1110"/><circle class="st" cx="110" cy="512" r="8"/><circle class="st" cx="1110" cy="512" r="8"/>
+    <text class="yr" x="1110" y="490" text-anchor="end" style="font-size:19px">730,000 pages</text>
+  </svg>
+  <div class="note" style="top:574px"><p>Nearly a million pages for Ceylon alone. Beside them: 32,000 issues of the London Gazette and 371 volumes of Canada’s Sessional Papers.</p></div>
+  <svg class="where" width="420" height="20"><path d="M6 10 H186" stroke="var(--neutral)" stroke-width="3"/><circle cx="6" cy="10" r="6" fill="var(--accent)"/><circle cx="42" cy="10" r="4" fill="var(--neutral)"/><circle cx="78" cy="10" r="4" fill="var(--neutral)"/><circle cx="114" cy="10" r="4" fill="var(--neutral)"/><circle cx="150" cy="10" r="4" fill="var(--neutral)"/><circle cx="186" cy="10" r="4" fill="var(--neutral)"/><text x="204" y="15">The base</text></svg>
+</section>
+
+<!-- 6. The question -->
+<section class="slide" id="s06">
+  <p class="label">The question</p>
+  <p class="statement">How did each part of the British world get past the ecological limits it could not meet at home?</p>
+  <svg class="map" width="1280" height="720" viewBox="0 0 1280 720" role="img"
+       aria-label="Six limits as stations on one line: climate, with tea and rubber; disease, with quinine; food, with rice; soil, with oilseed cake and bone; energy, with coal and oil; labour, with workers from South India.">
+    <path class="line" stroke="var(--neutral)" d="M110 520 H1170"/>
+    <circle class="st" cx="150" cy="520" r="8"/><text class="stn" x="150" y="490" text-anchor="middle">Climate</text><text class="yr" x="150" y="556" text-anchor="middle">tea, rubber</text>
+    <circle class="st" cx="346" cy="520" r="8"/><text class="stn" x="346" y="490" text-anchor="middle">Disease</text><text class="yr" x="346" y="556" text-anchor="middle">quinine</text>
+    <circle class="st" cx="542" cy="520" r="8"/><text class="stn" x="542" y="490" text-anchor="middle">Food</text><text class="yr" x="542" y="556" text-anchor="middle">rice</text>
+    <circle class="st" cx="738" cy="520" r="8"/><text class="stn" x="738" y="490" text-anchor="middle">Soil</text><text class="yr" x="738" y="556" text-anchor="middle">oilseed cake, bone</text>
+    <circle class="st" cx="934" cy="520" r="8"/><text class="stn" x="934" y="490" text-anchor="middle">Energy</text><text class="yr" x="934" y="556" text-anchor="middle">coal, oil</text>
+    <circle class="st" cx="1130" cy="520" r="8"/><text class="stn" x="1130" y="490" text-anchor="middle">Labour</text><text class="yr" x="1130" y="556" text-anchor="middle">South India</text>
+  </svg>
+  <svg class="where" width="420" height="20"><path d="M6 10 H186" stroke="var(--neutral)" stroke-width="3"/><circle cx="6" cy="10" r="4" fill="var(--neutral)"/><circle cx="42" cy="10" r="6" fill="var(--accent)"/><circle cx="78" cy="10" r="4" fill="var(--neutral)"/><circle cx="114" cy="10" r="4" fill="var(--neutral)"/><circle cx="150" cy="10" r="4" fill="var(--neutral)"/><circle cx="186" cy="10" r="4" fill="var(--neutral)"/><text x="204" y="15">The question</text></svg>
+</section>
+
+<script>if (location.search.includes('dark')) document.documentElement.classList.add('dark');</script>
+</body>
+</html>

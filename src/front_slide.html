@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mapping the Colonial Administrative State</title>
+<!-- Front slide, 1280 x 720. Open in Chrome; add ?dark to the address for the dark version.
+     The drawing is a schematic route map of the talk, not a map: positions carry no distance.
+     Render to PNG with render_front_slide.py. -->
+<style>
+@font-face { font-family: "Atkinson Next"; src: url("fonts/AtkinsonHyperlegibleNext-Regular.woff") format("woff"); font-weight: 400; }
+@font-face { font-family: "Atkinson Next"; src: url("fonts/AtkinsonHyperlegibleNext-Bold.woff") format("woff"); font-weight: 700; }
+:root {
+  --ground: #FDFCF9; --title: #22272B; --body: #404040; --second: #5C6166; --accent: #1F5F96;
+  --career: #1F5F96; --tea: #2F8F4A; --bark: #A8462A; --rubber: #7B4FC4; --rice: #C99700;
+  --station: #FDFCF9; --station-ring: #22272B;
+}
+html.dark {
+  --ground: #1C1B19; --title: #E8DFCB; --body: #C4C3C0; --second: #9A9790; --accent: #6699D3;
+  --career: #6699D3; --tea: #6DBF7B; --bark: #DC7559; --rubber: #B195F0; --rice: #E0B93A;
+  --station: #1C1B19; --station-ring: #E8DFCB;
+}
+html, body { margin: 0; background: var(--ground); }
+.slide { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground);
+         font-family: "Atkinson Next", "Atkinson Hyperlegible", Arial, sans-serif; color: var(--body); }
+.words { position: absolute; left: 96px; top: 56px; width: 760px; }
+.label { font-size: 20px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--second); margin: 0 0 18px; }
+h1 { font-size: 56px; line-height: 1.1; font-weight: 700; color: var(--title); margin: 0 0 18px; letter-spacing: -0.01em; }
+.sub { font-size: 25px; line-height: 1.35; color: var(--body); margin: 0 0 26px; }
+.who { font-size: 22px; line-height: 1.4; margin: 0; }
+.who b { color: var(--accent); font-weight: 700; }
+.who span { color: var(--second); }
+.foot { position: absolute; right: 96px; bottom: 30px; font-size: 18px; color: var(--second); margin: 0; }
+svg { position: absolute; left: 0; top: 0; }
+.line { fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.st { fill: var(--station); stroke: var(--station-ring); stroke-width: 3; }
+.stn { font-size: 18px; fill: var(--title); }
+.yr { font-size: 16px; fill: var(--second); }
+.ln { font-size: 16px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.hub { font-size: 24px; font-weight: 700; fill: var(--title); }
+</style>
+</head>
+<body>
+<div class="slide">
+  <svg width="1280" height="720" viewBox="0 0 1280 720" role="img"
+       aria-label="Route map of the talk. Ceylon is the interchange. Cinchona bark and tea run from Ceylon to London; the bark goes on to the Stratford works and reaches Canada as quinine, and tea reaches Canada too. Rubber runs from Ceylon to the United States, and returns to Canada as tyres. Rice runs into Ceylon from Burma. One official's career runs from Ceylon through British Honduras, British Guiana and the Cape to Bombay.">
+    <g transform="translate(0,22)">
+    <!-- a career: Wodehouse, in order of posting -->
+    <path class="line" stroke="var(--career)" d="M980 540 V168"/>
+    <!-- rice in -->
+    <path class="line" stroke="var(--rice)" d="M1184 540 H980"/>
+    <!-- cinchona bark, then quinine -->
+    <path class="line" stroke="var(--bark)" d="M980 540 L910 470 H196"/>
+    <!-- tea, beside it -->
+    <path class="line" stroke="var(--tea)" d="M974.3 545.7 L906.6 478 H196"/>
+    <!-- rubber out -->
+    <path class="line" stroke="var(--rubber)" d="M980 540 L910 610 H330"/>
+    <!-- tyres back -->
+    <path class="line" stroke="var(--rubber)" stroke-width="4" stroke-dasharray="2 10" d="M330 610 L204 484"/>
+
+    <!-- line names -->
+    <text class="ln" x="760" y="452" text-anchor="middle" fill="var(--bark)">cinchona bark</text>
+    <text class="ln" x="350" y="452" text-anchor="middle" fill="var(--bark)">quinine</text>
+    <text class="ln" x="760" y="504" text-anchor="middle" fill="var(--tea)">tea</text>
+    <text class="ln" x="620" y="638" text-anchor="middle" fill="var(--rubber)">rubber</text>
+    <text class="ln" x="240" y="566" text-anchor="end" fill="var(--rubber)">tyres</text>
+    <text class="ln" x="1082" y="568" text-anchor="middle" fill="var(--rice)">rice</text>
+    <text class="ln" x="980" y="118" text-anchor="middle" fill="var(--career)">one career</text>
+
+    <!-- stations -->
+    <rect class="st" x="631" y="460" width="18" height="28" rx="9"/>
+    <text class="stn" x="640" y="444" text-anchor="middle">London</text>
+    <circle class="st" cx="500" cy="470" r="8"/>
+    <text class="stn" x="500" y="444" text-anchor="middle">Stratford works</text>
+    <rect class="st" x="187" y="460" width="18" height="28" rx="9"/>
+    <text class="stn" x="196" y="444" text-anchor="middle">Canada</text>
+    <circle class="st" cx="330" cy="610" r="8"/>
+    <text class="stn" x="330" y="642" text-anchor="middle">United States</text>
+    <circle class="st" cx="1184" cy="540" r="8"/>
+    <text class="stn" x="1184" y="516" text-anchor="middle">Burma</text>
+
+    <circle class="st" cx="980" cy="438" r="8"/>
+    <text class="stn" x="1002" y="444">British Honduras <tspan class="yr">1851</tspan></text>
+    <circle class="st" cx="980" cy="348" r="8"/>
+    <text class="stn" x="1002" y="354">British Guiana <tspan class="yr">1854</tspan></text>
+    <circle class="st" cx="980" cy="258" r="8"/>
+    <text class="stn" x="1002" y="264">Cape Colony <tspan class="yr">1861</tspan></text>
+    <circle class="st" cx="980" cy="168" r="8"/>
+    <text class="stn" x="1002" y="174">Bombay <tspan class="yr">1872</tspan></text>
+
+    <!-- the interchange -->
+    <circle class="st" cx="980" cy="540" r="15" stroke-width="4"/>
+    <text class="hub" x="1002" y="592">Ceylon</text>
+    <text class="yr" x="1002" y="614">a writer there in 1828</text>
+    </g>
+  </svg>
+
+  <div class="words">
+    <p class="label">Social Science History Association</p>
+    <h1>Mapping the Colonial<br>Administrative State</h1>
+    <p class="sub">Linked Knowledge Graphs from Colonial and<br>Indian Office Lists, 1867–1947</p>
+    <p class="who"><b>Jim Clifford</b><br><span>University of Saskatchewan</span></p>
+  </div>
+  <p class="foot">jimclifford.ca/col_matching</p>
+</div>
+<script>if (location.search.includes('dark')) document.documentElement.classList.add('dark');</script>
+</body>
+</html>
