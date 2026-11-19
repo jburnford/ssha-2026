@@ -75,8 +75,8 @@ HTML = """<!doctype html>
 
 """ + slide("p2", "Two botanists in <i>The Tropical Agriculturist</i>", p2,
             "A network drawn from The Tropical Agriculturist. Henry Trimen and Daniel Morris are the two large nodes. About 1,250 small dots are the articles that name either of them. Around them sit the people most often named in the same articles, such as Thwaites, Marshall Ward, Nock, Hooker and J. E. Howard, the places, such as Peradeniya, Kew, Jamaica and Java, and the commodities, led by coffee, tea, cacao, rubber and cinchona.",
-            "About 1,250 articles, and more than 3,000 other people named in them.",
-            note_style="top:626px;left:96px;width:700px;font-size:18px") + "\n" + \
+            "<b>Beyond the trade statistics:</b> about 1,250 articles are a source for ecological imperialism and the people involved in it.",
+            note_style="top:618px;left:96px;width:690px;font-size:18px") + "\n" + \
     slide("p3", "Leonard Woolf: a career inside the island", p3,
           "Leonard Woolf's postings as a line: Jaffna 1905, Mannar 1906, Kandy 1907, Hambantota 1908 to 1911. A dotted link runs on from Hambantota, through Wikidata, to his novel The Village in the Jungle, 1913.",
           "The List places him at four stations in seven years. His Wikidata identifier leads on from the career to the novel.", p3x, "top:572px;left:456px;width:740px", sec=0) + """
