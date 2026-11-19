@@ -163,9 +163,9 @@ HTML = """<!doctype html>
 </head>
 <body>
 
-""" + slide("a1", "The graph and the reading build each other", a1,
+""" + slide("a1", "The graph and the text mining build each other", a1,
             "The live atlas beside three stages. The atlas shows a map around Colombo and a panel of people named at that place. About 12,500 records name a person at Colombo alone, from the Blue Books of 1863 to 1917 and Ferguson's Directory. Stage one, read from the page and placed, is done. Stage two, joining the same person across years, stage three, tying each person to an identifier, and stage four, using them as seeds to read the next source, come next.",
-            "Every source read adds to the graph, and every addition makes the next source easier to read.").replace('style="top:590px"', 'style="top:608px;font-size:21px;width:760px"').replace('<h2>The graph and the reading build each other</h2>\n', '<h2>The graph and the reading build each other</h2>\n' + a1x) + "\n" + \
+            "Every source read adds to the graph, and every addition makes the next source easier to read.").replace('style="top:590px"', 'style="top:608px;font-size:21px;width:760px"').replace('<h2>The graph and the text mining build each other</h2>\n', '<h2>The graph and the text mining build each other</h2>\n' + a1x) + "\n" + \
     slide("e1", "Building the Ceylonese side of the graph", e1,
             "A chart in which each dot is one person read from sampled pages of Ferguson's Ceylon Directory for 1920 to 1921. Nine rows are kinds of people: officials and councils, justices of the peace, headmen, lawyers and doctors, merchants and brokers, the press, associations and societies, religion and schools, clerks and others. British and European people stack to the left of a centre line and Ceylonese people to the right. Blue dots were already in the Colonial Office List, green dots were named in the journal, and orange dots are new to the graph. The left side is small and partly blue; the right side is large and almost all orange.",
             f"About {round(N_PEOPLE, -2):,} people read from 26 pages of Ferguson’s Directory, 1920–21. Four in five of the Ceylonese were new to the graph.").replace('style="top:590px"', 'style="top:632px;font-size:20px;width:1120px"') + "\n" + \
