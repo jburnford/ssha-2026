@@ -152,7 +152,7 @@ def main():
 <script>if (location.search.includes('dark')) document.documentElement.classList.add('dark');</script>
 </body>
 </html>
-""".replace("TITLE", "Two days of reading, drawn as a graph")
+""".replace("TITLE", "Two days of text mining, drawn as a graph")
     (HERE / "slides_graph.html").write_text(html, encoding="utf-8")
     print("wrote slides_graph.html |", ppl, "people", bod, "bodies", plc, "places", br, "bridges", len(seg), "bridge lines")
 
